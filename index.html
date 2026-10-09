@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Interactive explainers for backend and security ideas, built as small playable dioramas. Kairi Sameshima.">
+<title>Lessons — Kairi Sameshima</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="https://kairisameshima.github.io/resume/">kairi<b>.</b>sameshima</a>
+    <a class="backlink" href="https://kairisameshima.github.io/resume/">← resume</a>
+  </div>
+</nav>
+
+<header class="proj-hero">
+  <div class="wrap">
+    <span class="cat">Lessons · Interactive</span>
+    <h1>Backend and security ideas, as tiny playable worlds</h1>
+    <p class="lede">Each lesson is a small three.js diorama that walks through one idea step by step. A ledger beside it runs the same flow with real cryptography in your browser, so every key, signature, and check you see is computed live.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="lessons-list">
+    <div class="lessons">
+
+      <a class="card reveal" href="envelope-encryption/">
+        <span class="cat">Security · Interactive</span>
+        <h3>The Envelope Bank</h3>
+        <p>Envelope encryption as a miniature bank. A teller locks your letter with a one-time data key, a vault keeps the master key that seals it, and the deposit boxes only ever hold locked boxes. A second act covers delegation grants: A has the bank sign a short-lived slip so B can fetch A's access token without ever holding A's keys.</p>
+        <p class="more">Open the diorama →</p>
+        <div class="tags"><span class="tag">three.js</span><span class="tag">WebCrypto</span><span class="tag">AES-GCM</span><span class="tag">AES-KW</span><span class="tag">HMAC</span><span class="tag">KMS</span><span class="tag">Delegation</span></div>
+      </a>
+
+      <a class="card reveal" href="auth-checkpoint/">
+        <span class="cat">Auth · Interactive</span>
+        <h3>The Checkpoint</h3>
+        <p>How an auth gateway validates north/south traffic from users and east/west traffic between services, told as a border crossing. Travelers sign in with PKCE and get a short-lived entry pass; services trade for transit passes signed with a separate key, naming who they act for and the one service they may call.</p>
+        <p class="more">Open the diorama →</p>
+        <div class="tags"><span class="tag">three.js</span><span class="tag">WebCrypto</span><span class="tag">RS256</span><span class="tag">PKCE</span><span class="tag">JWKS</span><span class="tag">Token exchange</span></div>
+      </a>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 Kairi Sameshima</span><span><a href="https://kairisameshima.github.io/resume/">resume</a></span></div>
+</footer>
+
+<script>
+(function(){var r=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;var els=document.querySelectorAll(".reveal");if("IntersectionObserver"in window&&!r){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:0.12});els.forEach(function(e){io.observe(e);});}else{els.forEach(function(e){e.classList.add("in");});}})();
+</script>
+</body>
+</html>
